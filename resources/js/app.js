@@ -11,6 +11,9 @@ window.Vue = require('vue');
 const VueRouter = require('vue-router').default;
 Vue.use(VueRouter);
 
+import _ from 'lodash';
+Object.defineProperty(Vue.prototype, '_', { value: _ });
+
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 

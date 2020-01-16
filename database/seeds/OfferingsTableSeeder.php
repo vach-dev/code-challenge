@@ -16,6 +16,7 @@ class OfferingsTableSeeder extends Seeder
             $offering = new \App\Offering();
             $offering->title = 'Offering-'.$i;
             $offering->price = rand(10,100);
+            $offering->quantity = rand(10, 100);
             $offering->save();
         }
     }

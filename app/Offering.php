@@ -8,4 +8,8 @@ class Offering extends Model
 {
     protected $table = 'Offerings';
 
+    public function purchases() {
+        return $this->hasMany(Purchase::class, 'offeringID');
+    }
+
 }

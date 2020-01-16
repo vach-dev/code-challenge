@@ -9,4 +9,8 @@ class Purchase extends Model
     protected $table = 'Purchases';
 
     protected $fillable = ['customerName', 'offeringID', 'quantity'];
+
+    public function offering() {
+        return $this->belongsTo(Offering::class, 'offeringID');
+    }
 }
